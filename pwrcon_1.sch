@@ -16,13 +16,13 @@ $EndDescr
 $Comp
 L power:GND #PWR0101
 U 1 1 5D0A6493
-P 3775 6100
-F 0 "#PWR0101" H 3775 5850 50  0001 C CNN
-F 1 "GND" V 3780 5972 50  0000 R CNN
-F 2 "" H 3775 6100 50  0001 C CNN
-F 3 "" H 3775 6100 50  0001 C CNN
-	1    3775 6100
-	0    -1   -1   0   
+P 3800 6500
+F 0 "#PWR0101" H 3800 6250 50  0001 C CNN
+F 1 "GND" V 3805 6372 50  0000 R CNN
+F 2 "" H 3800 6500 50  0001 C CNN
+F 3 "" H 3800 6500 50  0001 C CNN
+	1    3800 6500
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R1
@@ -123,7 +123,7 @@ F 5 "SML-D12M8WT86" H 3225 7200 50  0001 C CNN "MFG Part Num"
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3675 7550 3225 7550
+	3675 7550 3600 7550
 Wire Wire Line
 	3225 7550 3225 7350
 Wire Wire Line
@@ -313,13 +313,10 @@ Wire Wire Line
 	5550 1550 6150 1550
 Text Notes 7900 1100 0    50   ~ 0
 PowerPax 5V, 1000mA,\n72% efficiency, input current 70mA  \ninrush 20A - 1A/250V slow blow fuse
-Text Label 3675 5750 0    50   ~ 0
+Text Label 3950 6000 0    50   ~ 0
 3V3
 Wire Wire Line
-	3675 6500 3675 6100
-Wire Wire Line
 	3675 6500 3675 7550
-Connection ~ 3675 6500
 Wire Wire Line
 	4350 1550 4750 1550
 Wire Wire Line
@@ -435,37 +432,10 @@ F 7 "0031.8201" H 2850 1450 50  0001 C CNN "MFG Part Num"
 	1    0    0    -1  
 $EndComp
 Connection ~ 3225 7050
-$Comp
-L Connector:Conn_01x03_Female J5
-U 1 1 5DA5D055
-P 4150 6400
-F 0 "J5" H 4178 6426 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 4178 6335 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 4150 6400 50  0001 C CNN
-F 3 "~" H 4150 6400 50  0001 C CNN
-	1    4150 6400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3675 6000 3950 6000
 Wire Wire Line
-	3950 6000 3950 6300
-Wire Wire Line
-	3675 6100 3775 6100
-Wire Wire Line
-	3775 6100 3775 6400
-Wire Wire Line
-	3775 6400 3950 6400
-Connection ~ 3775 6100
-Wire Wire Line
-	3775 6400 3775 6500
-Wire Wire Line
-	3775 6500 3950 6500
-Connection ~ 3775 6400
-Wire Wire Line
-	4350 7050 4350 7225
-Wire Wire Line
-	3225 7050 4350 7050
+	3225 7050 3600 7050
 $Comp
 L 2020-09-12_16-45-05:SN74LV1T34DBVR U4
 U 1 1 5F6122C0
@@ -621,7 +591,7 @@ Wire Wire Line
 	6950 3775 6950 4050
 Wire Wire Line
 	6950 4050 7075 4050
-Text Label 4050 4700 2    50   ~ 0
+Text Label 3500 4500 1    50   ~ 0
 RS485_EN
 Text Label 5375 5925 2    50   ~ 0
 RS485_RXD
@@ -1009,24 +979,11 @@ Wire Wire Line
 Wire Wire Line
 	1075 7550 1825 7550
 Connection ~ 1825 7550
-$Comp
-L Connector:Conn_01x03_Female J8
-U 1 1 5F9513D7
-P 3300 4600
-F 0 "J8" H 3328 4626 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 3328 4535 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3300 4600 50  0001 C CNN
-F 3 "~" H 3300 4600 50  0001 C CNN
-	1    3300 4600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5450 3775 3600 3775
-Wire Wire Line
-	4050 4700 3500 4700
-Text Label 3500 4500 1    50   ~ 0
+Text Label 3725 5125 2    50   ~ 0
 RS485_RXD
-Text Label 3500 4600 3    50   ~ 0
+Text Label 3600 4600 0    50   ~ 0
 RS485_TXD
 Text Label 1025 7050 1    50   ~ 0
 NC
@@ -1341,24 +1298,9 @@ Wire Wire Line
 Wire Wire Line
 	3600 4600 3600 3775
 Wire Wire Line
-	3500 4500 3725 4500
-Wire Wire Line
-	3725 4500 3725 5400
-Wire Wire Line
 	8100 1850 8100 2250
 Wire Wire Line
 	6900 2150 6900 2450
-$Comp
-L Connector_Generic:Conn_01x04 J6
-U 1 1 5ECCF259
-P 4250 7425
-F 0 "J6" V 4122 7605 50  0000 L CNN
-F 1 "Conn_01x04" V 4213 7605 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 4250 7425 50  0001 C CNN
-F 3 "~" H 4250 7425 50  0001 C CNN
-	1    4250 7425
-	0    1    1    0   
-$EndComp
 $Comp
 L Converter_ACDC:IRM-02-5 PS1
 U 1 1 5F7A3C57
@@ -1378,4 +1320,75 @@ Text Label 8800 3850 0    50   ~ 0
 vcc
 Wire Wire Line
 	9000 4950 9500 4950
+$Comp
+L Device:C_Small C12
+U 1 1 5F8781FD
+P 3600 7250
+F 0 "C12" H 3692 7296 50  0000 L CNN
+F 1 "0.1u" H 3692 7205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3600 7250 50  0001 C CNN
+F 3 "~" H 3600 7250 50  0001 C CNN
+F 4 "Kemet" H 3600 7250 50  0001 C CNN "MFG Name"
+F 5 "C0603C104J4RACTU" H 3600 7250 50  0001 C CNN "MFG Part Num"
+	1    3600 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 7150 3600 7050
+Connection ~ 3600 7050
+Wire Wire Line
+	3600 7350 3600 7550
+Connection ~ 3600 7550
+Wire Wire Line
+	3600 7550 3225 7550
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J6
+U 1 1 5FEE70CE
+P 4225 7325
+F 0 "J6" V 4229 7605 50  0000 L CNN
+F 1 "Conn_02x05_Odd_Even" V 4320 7605 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 4225 7325 50  0001 C CNN
+F 3 "~" H 4225 7325 50  0001 C CNN
+	1    4225 7325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4425 7125 4425 7050
+Wire Wire Line
+	3600 7050 4425 7050
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J88
+U 1 1 5FF2063A
+P 3300 4700
+F 0 "J88" H 3350 4275 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 3350 4366 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 3300 4700 50  0001 C CNN
+F 3 "~" H 3300 4700 50  0001 C CNN
+	1    3300 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5F84025E
+P 3000 4900
+F 0 "#PWR0115" H 3000 4650 50  0001 C CNN
+F 1 "GND" H 3005 4727 50  0000 C CNN
+F 2 "" H 3000 4900 50  0001 C CNN
+F 3 "" H 3000 4900 50  0001 C CNN
+	1    3000 4900
+	1    0    0    -1  
+$EndComp
+Text Label 3500 4900 0    50   ~ 0
+3V3
+Wire Wire Line
+	3500 4700 3725 4700
+Wire Wire Line
+	3725 4700 3725 5400
+Wire Wire Line
+	3500 4500 4050 4500
+Wire Wire Line
+	4050 4500 4050 4700
+Wire Wire Line
+	3675 6500 3800 6500
+Connection ~ 3675 6500
 $EndSCHEMATC
