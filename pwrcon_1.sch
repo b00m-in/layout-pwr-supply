@@ -37,19 +37,6 @@ F 5 "ESR03EZPJ102" H 1125 6050 50  0001 C CNN "MFG Part Num"
 	1    1125 6050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:D D1
-U 1 1 5D0A80F4
-P 2475 5750
-F 0 "D1" H 2475 5966 50  0000 C CNN
-F 1 "D" H 2475 5875 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 2475 5750 50  0001 C CNN
-F 3 "~" H 2475 5750 50  0001 C CNN
-F 4 "Diodes Inc" H 2475 5750 50  0001 C CNN "MFG Name"
-F 5 " BAV16W-7-F" H 2475 5750 50  0001 C CNN "MFG Part Num"
-	1    2475 5750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1125 5950 1125 5750
 Wire Wire Line
@@ -84,9 +71,11 @@ L Amplifier_Operational:LM358 U1
 U 2 1 5D0ABC5A
 P 2575 7050
 F 0 "U1" H 2575 7417 50  0000 C CNN
-F 1 "LM358" H 2575 7326 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 2575 7050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2575 7050 50  0001 C CNN
+F 1 "LM358M" H 2575 7326 50  0000 C CNN
+F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm" H 2575 7050 50  0001 C CNN
+F 3 "~/dev/kicad/mov/pwrcon_1/docs/lm358-n.pdf" H 2575 7050 50  0001 C CNN
+F 4 "Texas Instruments" H 2575 7050 50  0001 C CNN "MFG Name"
+F 5 "LM358M/NOPB" H 2575 7050 50  0001 C CNN "MFG Part Num"
 	2    2575 7050
 	1    0    0    -1  
 $EndComp
@@ -126,8 +115,6 @@ Wire Wire Line
 	3675 7550 3600 7550
 Wire Wire Line
 	3225 7550 3225 7350
-Wire Wire Line
-	2625 5750 3675 5750
 $Comp
 L Device:R_Small R5
 U 1 1 5D0BA795
@@ -313,7 +300,7 @@ Wire Wire Line
 	5550 1550 6150 1550
 Text Notes 7900 1100 0    50   ~ 0
 PowerPax 5V, 1000mA,\n72% efficiency, input current 70mA  \ninrush 20A - 1A/250V slow blow fuse
-Text Label 3950 6000 0    50   ~ 0
+Text Label 2325 5750 0    50   ~ 0
 3V3
 Wire Wire Line
 	3675 6500 3675 7550
@@ -381,9 +368,11 @@ L Amplifier_Operational:LM358 U1
 U 3 1 5D0C045A
 P 2575 7050
 F 0 "U1" H 2533 7096 50  0000 L CNN
-F 1 "LM358" H 2533 7005 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 2575 7050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2575 7050 50  0001 C CNN
+F 1 "LM358M" H 2533 7005 50  0000 L CNN
+F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm" H 2575 7050 50  0001 C CNN
+F 3 "~/dev/kicad/mov/pwrcon_1/lm358-n.pdf" H 2575 7050 50  0001 C CNN
+F 4 "Texas Instruments" H 2575 7050 50  0001 C CNN "MFG Name"
+F 5 "LM358M/NOPB" H 2575 7050 50  0001 C CNN "MFG Part Num"
 	3    2575 7050
 	1    0    0    -1  
 $EndComp
@@ -405,8 +394,6 @@ F 8 "744862250" H 5350 1850 50  0001 C CNN "MFG Part Num"
 	1    5350 1850
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3675 6000 3675 5750
 Wire Wire Line
 	1125 7050 1125 7150
 Wire Wire Line
@@ -432,8 +419,6 @@ F 7 "0031.8201" H 2850 1450 50  0001 C CNN "MFG Part Num"
 	1    0    0    -1  
 $EndComp
 Connection ~ 3225 7050
-Wire Wire Line
-	3675 6000 3950 6000
 Wire Wire Line
 	3225 7050 3600 7050
 $Comp
@@ -518,8 +503,6 @@ Text Label 6875 6325 0    50   ~ 0
 3V3
 Text Notes 9950 3600 0    50   ~ 0
 Isolated RS485 Transceiver
-Wire Wire Line
-	7075 4250 7075 4450
 Connection ~ 8675 5150
 $Comp
 L power:GNDA #PWR0106
@@ -556,11 +539,7 @@ Wire Wire Line
 Wire Wire Line
 	9200 4750 9500 4750
 Wire Wire Line
-	9200 4250 9200 4750
-Wire Wire Line
 	8675 4250 9200 4250
-Wire Wire Line
-	9500 4650 9425 4650
 $Comp
 L 2020-09-12_17-09-47:ISOW7841DWE U2
 U 1 1 5F5D7072
@@ -591,7 +570,7 @@ Wire Wire Line
 	6950 3775 6950 4050
 Wire Wire Line
 	6950 4050 7075 4050
-Text Label 3500 4500 1    50   ~ 0
+Text Label 4050 4600 2    50   ~ 0
 RS485_EN
 Text Label 5375 5925 2    50   ~ 0
 RS485_RXD
@@ -621,17 +600,16 @@ Wire Wire Line
 	6725 4450 7075 4450
 Wire Wire Line
 	5550 4700 6725 4700
-Connection ~ 7075 4450
 $Comp
-L Connector:TestPoint TP4
+L Connector:TestPoint TP2
 U 1 1 5F74616A
-P 9425 4650
-F 0 "TP4" H 9483 4768 50  0000 L CNN
-F 1 "TestPoint" H 9325 4850 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" H 9625 4650 50  0001 C CNN
-F 3 "~" H 9625 4650 50  0001 C CNN
-	1    9425 4650
-	1    0    0    -1  
+P 9000 4050
+F 0 "TP2" H 9058 4168 50  0000 L CNN
+F 1 "TestPoint" H 8900 4250 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9200 4050 50  0001 C CNN
+F 3 "~" H 9200 4050 50  0001 C CNN
+	1    9000 4050
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C8
@@ -983,7 +961,7 @@ Wire Wire Line
 	5450 3775 3600 3775
 Text Label 3725 5125 2    50   ~ 0
 RS485_RXD
-Text Label 3600 4600 0    50   ~ 0
+Text Label 3600 4700 0    50   ~ 0
 RS485_TXD
 Text Label 1025 7050 1    50   ~ 0
 NC
@@ -1065,7 +1043,7 @@ F 3 "" H 1850 4100 50  0001 C CNN
 	1    1850 4100
 	1    0    0    -1  
 $EndComp
-Text Label 2150 3700 0    50   ~ 0
+Text Label 2625 3700 1    50   ~ 0
 3V3
 Text Label 1550 3700 2    50   ~ 0
 5VDC
@@ -1075,10 +1053,12 @@ $Comp
 L Device:C_Small C10
 U 1 1 5F769B74
 P 2325 3800
-F 0 "C10" H 2417 3846 50  0000 L CNN
-F 1 "1u" H 2417 3755 50  0000 L CNN
+F 0 "C10" H 2400 3800 50  0000 L CNN
+F 1 "4u7" H 2400 3725 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2325 3800 50  0001 C CNN
 F 3 "~" H 2325 3800 50  0001 C CNN
+F 4 "AVX" H 2325 3800 50  0001 C CNN "MFG Name"
+F 5 "F981A475MMA" H 2325 3800 50  0001 C CNN "MFG Part Num"
 	1    2325 3800
 	1    0    0    -1  
 $EndComp
@@ -1093,10 +1073,12 @@ $Comp
 L Device:C_Small C11
 U 1 1 5F791E36
 P 2150 3900
-F 0 "C11" H 2242 3946 50  0000 L CNN
-F 1 "470p" H 2242 3855 50  0000 L CNN
+F 0 "C11" H 2225 3875 50  0000 L CNN
+F 1 "470p" H 2150 3800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2150 3900 50  0001 C CNN
 F 3 "~" H 2150 3900 50  0001 C CNN
+F 4 "Murata" H 2150 3900 50  0001 C CNN "MFG Name"
+F 5 "‎GRM033R61E471KA01D‎" H 2150 3900 50  0001 C CNN "MFG Part Num"
 	1    2150 3900
 	1    0    0    -1  
 $EndComp
@@ -1290,13 +1272,6 @@ Wire Wire Line
 	4950 5400 4950 5925
 Wire Wire Line
 	4950 5925 5375 5925
-Connection ~ 9425 4650
-Wire Wire Line
-	9425 4650 8675 4650
-Wire Wire Line
-	3500 4600 3600 4600
-Wire Wire Line
-	3600 4600 3600 3775
 Wire Wire Line
 	8100 1850 8100 2250
 Wire Wire Line
@@ -1381,14 +1356,91 @@ $EndComp
 Text Label 3500 4900 0    50   ~ 0
 3V3
 Wire Wire Line
-	3500 4700 3725 4700
-Wire Wire Line
-	3725 4700 3725 5400
-Wire Wire Line
-	3500 4500 4050 4500
-Wire Wire Line
-	4050 4500 4050 4700
-Wire Wire Line
 	3675 6500 3800 6500
 Connection ~ 3675 6500
+Wire Wire Line
+	3500 4800 3725 4800
+Wire Wire Line
+	3725 4800 3725 5400
+Wire Wire Line
+	3500 4700 3600 4700
+Wire Wire Line
+	4050 4600 4050 4700
+Wire Wire Line
+	3600 3775 3600 4700
+Wire Wire Line
+	3500 4600 4050 4600
+Wire Wire Line
+	7075 4250 7075 4450
+Connection ~ 7075 4450
+Text Label 3500 4500 0    50   ~ 0
+5VDC
+$Comp
+L power:GND #PWR0116
+U 1 1 5FBCB498
+P 3000 4500
+F 0 "#PWR0116" H 3000 4250 50  0001 C CNN
+F 1 "GND" V 3005 4372 50  0000 R CNN
+F 2 "" H 3000 4500 50  0001 C CNN
+F 3 "" H 3000 4500 50  0001 C CNN
+	1    3000 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5FC26E34
+P 3000 4600
+F 0 "#PWR0117" H 3000 4350 50  0001 C CNN
+F 1 "GND" V 3005 4472 50  0000 R CNN
+F 2 "" H 3000 4600 50  0001 C CNN
+F 3 "" H 3000 4600 50  0001 C CNN
+	1    3000 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5FC6C320
+P 2475 3700
+F 0 "R13" V 2550 3825 50  0000 C CNN
+F 1 "0" V 2575 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2405 3700 50  0001 C CNN
+F 3 "~" H 2475 3700 50  0001 C CNN
+F 4 "Y" V 2475 3700 50  0001 C CNN "Fit"
+F 5 "Rohm" H 2475 3700 50  0001 C CNN "MFG Name"
+F 6 "ESR03EZPJ152" H 2475 3700 50  0001 C CNN "MFG Part Num"
+	1    2475 3700
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2325 3700
+Connection ~ 9000 4050
+Wire Wire Line
+	8675 4650 8850 4650
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FCB900E
+P 9075 4450
+F 0 "TP1" H 9133 4568 50  0000 L CNN
+F 1 "TestPoint" H 8975 4650 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9275 4450 50  0001 C CNN
+F 3 "~" H 9275 4450 50  0001 C CNN
+	1    9075 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5FCC1982
+P 8850 4650
+F 0 "TP3" H 8908 4768 50  0000 L CNN
+F 1 "TestPoint" H 8750 4850 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9050 4650 50  0001 C CNN
+F 3 "~" H 9050 4650 50  0001 C CNN
+	1    8850 4650
+	-1   0    0    1   
+$EndComp
+Connection ~ 8850 4650
+Wire Wire Line
+	8850 4650 9500 4650
+Connection ~ 9075 4450
+Wire Wire Line
+	9200 4250 9200 4750
 $EndSCHEMATC
